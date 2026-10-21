@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agua turbia en Guadalajara: qué pasa y qué se puede hacer</title>
+<meta name="description" content="Explicación con ilustraciones y fuentes de la crisis de calidad del agua en la Zona Metropolitana de Guadalajara (2026): la presa Las Pintas, los tandeos, el acueducto sustituto y las alternativas.">
+<meta property="og:title" content="Agua turbia en Guadalajara: qué pasa y qué se puede hacer">
+<meta property="og:description" content="La crisis del agua en la ZMG explicada con ilustraciones y fuentes.">
+<meta property="og:type" content="article">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3C16 3 6 14.5 6 20a10 10 0 0 0 20 0C26 14.5 16 3 16 3z' fill='%231f6f8b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ec; --surface:#fffdf8; --ink:#1d2328; --muted:#5b6670; --line:#ddd6c8;
+  --water:#1f6f8b; --water-2:#7fb6c9; --water-soft:#dceef4;
+  --dirty:#8a5a2b; --dirty-soft:#efe1cf; --alert:#b3412e; --alert-soft:#f6ddd6;
+  --ok:#2f7d4f; --ok-soft:#dcefe2; --accent:#c78a1e;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 6px 24px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#11161a; --surface:#182026; --ink:#e7ecef; --muted:#9aa7b1; --line:#2a353d;
+    --water:#5fb3cf; --water-2:#2f6f86; --water-soft:#163440;
+    --dirty:#d2a06c; --dirty-soft:#3a2c1e; --alert:#ee7d68; --alert-soft:#3c2019;
+    --ok:#6cc391; --ok-soft:#173527; --accent:#e5ae47;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11161a; --surface:#182026; --ink:#e7ecef; --muted:#9aa7b1; --line:#2a353d;
+  --water:#5fb3cf; --water-2:#2f6f86; --water-soft:#163440;
+  --dirty:#d2a06c; --dirty-soft:#3a2c1e; --alert:#ee7d68; --alert-soft:#3c2019;
+  --ok:#6cc391; --ok-soft:#173527; --accent:#e5ae47; --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.15;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,6vw,3.3rem);margin:.3em 0 .35em}
+h2{font-size:clamp(1.5rem,4vw,2.1rem);margin:0 0 .5em}
+h3{font-size:1.2rem;margin:0 0 .3em}
+p{margin:0 0 1em}
+a{color:var(--water)}
+sup.c{line-height:0}
+sup.c a{font-size:.68em;font-weight:600;text-decoration:none;padding:0 .12em;color:var(--water)}
+sup.c a:hover{text-decoration:underline}
+.muted{color:var(--muted)}
+header.hero{padding:56px 0 28px;border-bottom:1px solid var(--line)}
+.kicker{font-size:.8rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--water)}
+.lede{font-size:1.18rem;color:var(--muted);max-width:680px}
+.meta{font-size:.85rem;color:var(--muted);margin-top:14px}
+nav.toc{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+nav.toc .wrap{display:flex;gap:18px;overflow-x:auto;padding-top:10px;padding-bottom:10px;scrollbar-width:none}
+nav.toc a{white-space:nowrap;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none}
+nav.toc a:hover{color:var(--ink)}
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+.figure{margin:24px 0 8px}
+.figure svg{width:100%;height:auto;display:block}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+@media (max-width:640px){.scroll svg{min-width:620px}.scroll::after{content:"Desliza para ver la ilustración completa →";display:block;font-size:.75rem;color:var(--muted);margin-top:6px}}
+figcaption{font-size:.85rem;color:var(--muted);margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-top:24px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.stat b{display:block;font-family:Fraunces,serif;font-size:2rem;line-height:1.05;color:var(--water)}
+.stat.bad b{color:var(--alert)}
+.stat span{font-size:.88rem;color:var(--muted)}
+.mix{display:flex;height:42px;border-radius:10px;overflow:hidden;margin:16px 0 10px;border:1px solid var(--line)}
+.mix div{display:flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.85rem;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.timeline{list-style:none;margin:24px 0 0;padding:0;position:relative}
+.timeline:before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.timeline li{position:relative;padding:0 0 22px 32px}
+.timeline li:before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--surface);border:3px solid var(--water)}
+.timeline li.hot:before{border-color:var(--alert)}
+.timeline .when{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px}
+.tag{display:inline-block;font-family:Inter,sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;margin-bottom:8px}
+.tag.short{background:var(--alert-soft);color:var(--alert)}
+.tag.mid{background:var(--dirty-soft);color:var(--dirty)}
+.tag.long{background:var(--water-soft);color:var(--water)}
+.tag.ok{background:var(--ok-soft);color:var(--ok)}
+.card ul{margin:.4em 0 0;padding-left:1.1em}
+.card li{margin:.25em 0}
+.bars{margin-top:18px}
+.bar{margin:12px 0}
+.bar .lbl{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:5px;gap:10px}
+.bar .track{height:26px;background:var(--water-soft);border-radius:6px;overflow:hidden}
+.bar .fill{height:100%;border-radius:6px}
+.pc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media (max-width:640px){.pc{grid-template-columns:1fr}}
+.pc h3{display:flex;align-items:center;gap:8px}
+.callout{border-left:4px solid var(--accent);background:var(--surface);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.phase{display:grid;grid-template-columns:44px 1fr;gap:14px;margin:16px 0;align-items:start}
+.phase .n{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-family:Fraunces,serif;font-weight:700;font-size:1.2rem;background:var(--water-soft);color:var(--water)}
+dl.gloss{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;margin:18px 0 0}
+dl.gloss dt{font-weight:700}
+dl.gloss dd{margin:0;color:var(--muted)}
+@media (max-width:520px){dl.gloss{grid-template-columns:1fr}dl.gloss dd{margin-bottom:8px}}
+ol.sources{font-size:.88rem;padding-left:1.6em}
+ol.sources li{margin:.45em 0;scroll-margin-top:60px}
+ol.sources li:target{background:var(--water-soft);border-radius:6px}
+footer{padding:36px 0 60px;font-size:.85rem;color:var(--muted)}
+.theme-btn{position:fixed;right:14px;bottom:14px;z-index:6;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font:500 .85rem Inter,sans-serif;cursor:pointer;box-shadow:var(--shadow)}
+/* SVG palette */
+.s-water{fill:var(--water)} .s-water2{fill:var(--water-2)} .s-wsoft{fill:var(--water-soft)}
+.s-dirty{fill:var(--dirty)} .s-dsoft{fill:var(--dirty-soft)} .s-alert{fill:var(--alert)} .s-asoft{fill:var(--alert-soft)}
+.s-ok{fill:var(--ok)} .s-surface{fill:var(--surface)} .s-line{fill:var(--line)} .s-ink{fill:var(--ink)} .s-muted{fill:var(--muted)}
+.k-water{stroke:var(--water)} .k-dirty{stroke:var(--dirty)} .k-alert{stroke:var(--alert)} .k-line{stroke:var(--line)} .k-ink{stroke:var(--ink)} .k-ok{stroke:var(--ok)} .k-muted{stroke:var(--muted)}
+svg text{font-family:Inter,sans-serif;fill:var(--ink)}
+svg .t-muted{fill:var(--muted)}
+svg .t-alert{fill:var(--alert)}
+svg .t-water{fill:var(--water)}
+.flow{stroke-dasharray:10 8;animation:flow 1.6s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-36}}
+@media (prefers-reduced-motion:reduce){.flow{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">Zona Metropolitana de Guadalajara · 2026</div>
+    <h1>Agua turbia en la llave: qué está pasando y qué se puede hacer</h1>
+    <p class="lede">Una explicación con ilustraciones de la crisis de calidad del agua en Guadalajara, Zapopan, Tlaquepaque y Tonalá: de dónde viene el agua, dónde se ensucia, qué propone el gobierno y qué alternativas hay. Cada dato enlaza a su fuente.</p>
+    <div class="meta">Actualizado al 20 de octubre de 2026 · Los números pequeños junto a cada dato llevan a la <a href="#fuentes">lista de fuentes</a>.</div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Contenido">
+  <div class="wrap">
+    <a href="#resumen">Resumen</a>
+    <a href="#origen">De dónde viene</a>
+    <a href="#donde">Dónde se ensucia</a>
+    <a href="#cronologia">Cronología</a>
+    <a href="#plan">El plan oficial</a>
+    <a href="#acueducto">El acueducto</a>
+    <a href="#alternativas">Alternativas</a>
+    <a href="#tu">Qué puedes hacer</a>
+    <a href="#fuentes">Fuentes</a>
+  </div>
+</nav>
+
+<main>
+
+<!-- RESUMEN -->
+<section id="resumen">
+  <div class="wrap">
+    <h2>En 30 segundos</h2>
+    <p>Desde 2025 miles de hogares reciben agua turbia, con olor o color extraño. El gobierno de Jalisco reconoció en octubre de 2026 que la ciudad vive una crisis de agua potable y que el problema principal ya no es la cantidad sino la calidad<sup class="c"><a href="#f2">2</a></sup>. La causa más visible es la presa Las Pintas, que recibía descargas de aguas residuales<sup class="c"><a href="#f17">17</a></sup>. Para cortarlas, se dejó de usar esa fuente y arrancaron tandeos que durarán hasta marzo de 2027<sup class="c"><a href="#f24">24</a></sup>. A largo plazo, el gobierno propone un acueducto nuevo desde Chapala, cuyo financiamiento divide al Congreso<sup class="c"><a href="#f7">7</a></sup><sup class="c"><a href="#f21">21</a></sup>.</p>
+    <div class="stats">
+      <div class="stat"><b>~65%</b><span>del agua de la ZMG viene del Lago de Chapala<sup class="c"><a href="#f30">30</a></sup></span></div>
+      <div class="stat bad"><b>~30%</b><span>del suministro dejó de usarse al cerrar Las Pintas<sup class="c"><a href="#f24">24</a></sup></span></div>
+      <div class="stat bad"><b>627</b><span>colonias en tandeo, unas 2.3 millones de personas<sup class="c"><a href="#f24">24</a></sup></span></div>
+      <div class="stat bad"><b>77</b><span>descargas de aguas residuales detectadas en el sistema antiguo<sup class="c"><a href="#f26">26</a></sup></span></div>
+      <div class="stat bad"><b>30–40%</b><span>del agua se pierde en fugas de la red<sup class="c"><a href="#f15">15</a></sup></span></div>
+      <div class="stat"><b>45%</b><span>de su capacidad opera hoy el sistema El Zapotillo<sup class="c"><a href="#f10">10</a></sup></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGEN -->
+<section id="origen">
+  <div class="wrap">
+    <h2>¿De dónde viene el agua de la ciudad?</h2>
+    <p>La mayor parte llega del Lago de Chapala por dos vías: un acueducto cerrado y un sistema antiguo que combina canal a cielo abierto y la presa Las Pintas. El resto sale de pozos sobreexplotados y del sistema de presas Calderón–El Zapotillo<sup class="c"><a href="#f16">16</a></sup><sup class="c"><a href="#f4">4</a></sup>.</p>
+
+    <div class="mix" role="img" aria-label="Fuentes de agua: Chapala 63%, acuíferos 22%, presas 14%, manantiales 1%">
+      <div style="width:63%;background:var(--water)">Chapala 63%</div>
+      <div style="width:22%;background:var(--dirty)">Pozos 22%</div>
+      <div style="width:14%;background:var(--ok)">Presas 14%</div>
+      <div style="width:1%;background:var(--accent)"></div>
+    </div>
+    <div class="legend">
+      <span><i style="background:var(--water)"></i>Lago de Chapala</span>
+      <span><i style="background:var(--dirty)"></i>Acuíferos (pozos)</span>
+      <span><i style="background:var(--ok)"></i>Presas Calderón–El Zapotillo</span>
+      <span><i style="background:var(--accent)"></i>Manantiales (1%)</span>
+    </div>
+    <p class="muted" style="font-size:.85rem;margin-top:8px">Distribución según El Universal<sup class="c"><a href="#f16">16</a></sup>; otras fuentes estiman la parte de Chapala en alrededor de 65%<sup class="c"><a href="#f30">30</a></sup>.</p>
+
+    <figure class="figure card">
+      <div class="scroll"><svg viewBox="0 0 760 400" role="img" aria-labelledby="ruta-t ruta-d">
+        <title id="ruta-t">Ruta del agua desde Chapala hasta la ciudad</title>
+        <desc id="ruta-d">El agua de Chapala viaja por un acueducto cerrado y por el sistema antiguo, que pasa por el canal y la presa Las Pintas, donde llegan descargas de aguas residuales, antes de la planta potabilizadora 1 de Miravalle y la red de la ciudad.</desc>
+        <!-- lake -->
+        <ellipse cx="95" cy="230" rx="78" ry="58" class="s-wsoft"/>
+        <ellipse cx="95" cy="230" rx="78" ry="58" fill="none" class="k-water" stroke-width="2"/>
+        <path d="M45 225 q15 -8 30 0 t30 0 t30 0" fill="none" class="k-water" stroke-width="2" opacity=".6"/>
+        <path d="M55 245 q15 -8 30 0 t30 0 t30 0" fill="none" class="k-water" stroke-width="2" opacity=".6"/>
+        <text x="95" y="305" text-anchor="middle" font-size="14" font-weight="700">Lago de Chapala</text>
+
+        <!-- top: acueducto cerrado -->
+        <path d="M170 205 C 260 130, 380 120, 520 140" fill="none" class="k-line" stroke-width="12" stroke-linecap="round"/>
+        <path d="M170 205 C 260 130, 380 120, 520 140" fill="none" class="k-water flow" stroke-width="4" stroke-linecap="round"/>
+        <rect x="285" y="96" width="150" height="26" rx="13" class="s-surface" stroke="var(--line)"/>
+        <text x="360" y="114" text-anchor="middle" font-size="12" font-weight="600">Acueducto cerrado</text>
+
+        <!-- bottom: sistema antiguo -->
+        <path d="M170 255 C 230 300, 280 310, 330 305" fill="none" class="k-line" stroke-width="12" stroke-linecap="round"/>
+        <path d="M170 255 C 230 300, 280 310, 330 305" fill="none" class="k-dirty flow" stroke-width="4" stroke-linecap="round"/>
+        <text x="235" y="335" text-anchor="middle" font-size="12" class="t-muted">Canal a cielo abierto</text>
+
+        <!-- Las Pintas -->
+        <ellipse cx="385" cy="300" rx="55" ry="30" class="s-dsoft"/>
+        <ellipse cx="385" cy="300" rx="55" ry="30" fill="none" class="k-dirty" stroke-width="2"/>
+        <text x="385" y="304" text-anchor="middle" font-size="12" font-weight="700">Presa Las Pintas</text>
+        <!-- discharges -->
+        <g>
+          <path d="M350 238 v26" class="k-alert" stroke-width="3" stroke-linecap="round"/>
+          <path d="M385 230 v30" class="k-alert" stroke-width="3" stroke-linecap="round"/>
+          <path d="M420 238 v26" class="k-alert" stroke-width="3" stroke-linecap="round"/>
+          <path d="M343 260 l7 8 l7 -8" fill="none" class="k-alert" stroke-width="3"/>
+          <path d="M378 256 l7 8 l7 -8" fill="none" class="k-alert" stroke-width="3"/>
+          <path d="M413 260 l7 8 l7 -8" fill="none" class="k-alert" stroke-width="3"/>
+          <rect x="318" y="196" width="134" height="26" rx="13" class="s-asoft"/>
+          <text x="385" y="214" text-anchor="middle" font-size="12" font-weight="700" class="t-alert">77 descargas</text>
+        </g>
+        <path d="M440 300 C 480 300, 500 250, 520 215" fill="none" class="k-line" stroke-width="12" stroke-linecap="round"/>
+        <path d="M440 300 C 480 300, 500 250, 520 215" fill="none" class="k-dirty flow" stroke-width="4" stroke-linecap="round"/>
+
+        <!-- Planta -->
+        <rect x="520" y="130" width="96" height="96" rx="10" class="s-surface" stroke="var(--ink)" stroke-width="2"/>
+        <rect x="532" y="150" width="32" height="22" rx="3" class="s-wsoft"/>
+        <rect x="572" y="150" width="32" height="22" rx="3" class="s-wsoft"/>
+        <rect x="532" y="180" width="72" height="10" rx="3" class="s-water2"/>
+        <text x="568" y="212" text-anchor="middle" font-size="11" font-weight="700">Planta 1</text>
+        <text x="568" y="245" text-anchor="middle" font-size="11" class="t-muted">Miravalle</text>
+
+        <!-- to city -->
+        <path d="M616 178 L 660 178" fill="none" class="k-line" stroke-width="12" stroke-linecap="round"/>
+        <path d="M616 178 L 660 178" fill="none" class="k-water flow" stroke-width="4" stroke-linecap="round"/>
+        <!-- city -->
+        <g>
+          <rect x="664" y="140" width="26" height="60" class="s-line"/>
+          <rect x="694" y="120" width="30" height="80" class="s-line"/>
+          <rect x="728" y="155" width="22" height="45" class="s-line"/>
+          <rect x="670" y="150" width="6" height="6" class="s-surface"/><rect x="680" y="150" width="6" height="6" class="s-surface"/>
+          <rect x="700" y="132" width="6" height="6" class="s-surface"/><rect x="712" y="132" width="6" height="6" class="s-surface"/>
+          <rect x="700" y="150" width="6" height="6" class="s-surface"/><rect x="712" y="150" width="6" height="6" class="s-surface"/>
+          <text x="707" y="222" text-anchor="middle" font-size="13" font-weight="700">Ciudad</text>
+        </g>
+
+        <!-- Zapotillo -->
+        <rect x="560" y="28" width="186" height="50" rx="10" class="s-surface" stroke="var(--ok)" stroke-width="2"/>
+        <text x="653" y="49" text-anchor="middle" font-size="12" font-weight="700">El Zapotillo · Calderón</text>
+        <text x="653" y="67" text-anchor="middle" font-size="11" class="t-muted">opera al 45%</text>
+        <path d="M680 78 L 700 118" fill="none" class="k-ok" stroke-width="3" stroke-dasharray="5 5"/>
+
+        <!-- wells -->
+        <g>
+          <path d="M600 330 L 600 270" class="k-dirty" stroke-width="3"/>
+          <path d="M650 330 L 650 260" class="k-dirty" stroke-width="3"/>
+          <path d="M700 330 L 700 270" class="k-dirty" stroke-width="3"/>
+          <rect x="580" y="330" width="140" height="22" rx="4" class="s-dsoft"/>
+          <text x="650" y="346" text-anchor="middle" font-size="11" font-weight="600">Pozos (acuíferos)</text>
+        </g>
+      </svg></div>
+      <figcaption>Esquema simplificado, no a escala. Los puntos rojos marcan las descargas de aguas residuales detectadas en el sistema antiguo<sup class="c"><a href="#f26">26</a></sup>; el agua de pozos y presas entra por otras plantas<sup class="c"><a href="#f16">16</a></sup>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- DONDE -->
+<section id="donde">
+  <div class="wrap">
+    <h2>¿Dónde se ensucia el agua?</h2>
+    <p>No hay un solo punto de falla. Las fuentes coinciden en tres momentos del recorrido donde el agua puede contaminarse.</p>
+
+    <figure class="figure card">
+      <div class="scroll"><svg viewBox="0 0 760 250" role="img" aria-labelledby="falla-t">
+        <title id="falla-t">Tres puntos donde se contamina el agua: la fuente, la planta y la red</title>
+        <path d="M120 105 H 640" class="k-line" stroke-width="10" stroke-linecap="round"/>
+        <path d="M120 105 H 640" class="k-water flow" stroke-width="3"/>
+        <!-- 1 fuente -->
+        <circle cx="130" cy="105" r="58" class="s-dsoft"/>
+        <path d="M130 70 C130 70 106 98 106 113 a24 24 0 0 0 48 0 C154 98 130 70 130 70z" class="s-dirty"/>
+        <circle cx="122" cy="112" r="4" class="s-surface" opacity=".7"/><circle cx="138" cy="122" r="3" class="s-surface" opacity=".7"/>
+        <circle cx="178" cy="60" r="16" class="s-alert"/><text x="178" y="66" text-anchor="middle" font-size="15" font-weight="700" fill="#fff" style="fill:#fff">1</text>
+        <text x="130" y="192" text-anchor="middle" font-size="14" font-weight="700">En la fuente</text>
+        <text x="130" y="212" text-anchor="middle" font-size="11.5" class="t-muted">aguas residuales llegan</text>
+        <text x="130" y="228" text-anchor="middle" font-size="11.5" class="t-muted">al canal y a Las Pintas</text>
+        <!-- 2 planta -->
+        <circle cx="380" cy="105" r="58" class="s-wsoft"/>
+        <rect x="350" y="78" width="60" height="54" rx="6" class="s-surface" stroke="var(--ink)" stroke-width="2"/>
+        <rect x="358" y="90" width="44" height="10" rx="2" class="s-water2"/>
+        <rect x="358" y="106" width="44" height="10" rx="2" class="s-water2"/>
+        <path d="M402 132 q10 10 0 22" fill="none" class="k-dirty" stroke-width="3"/>
+        <circle cx="428" cy="60" r="16" class="s-alert"/><text x="428" y="66" text-anchor="middle" font-size="15" font-weight="700" style="fill:#fff">2</text>
+        <text x="380" y="192" text-anchor="middle" font-size="14" font-weight="700">En la planta</text>
+        <text x="380" y="212" text-anchor="middle" font-size="11.5" class="t-muted">sedimentos tras lavar filtros;</text>
+        <text x="380" y="228" text-anchor="middle" font-size="11.5" class="t-muted">plantas sin modernizar</text>
+        <!-- 3 red -->
+        <circle cx="630" cy="105" r="58" class="s-asoft"/>
+        <path d="M590 100 H 670" class="k-muted" stroke-width="14" stroke-linecap="round"/>
+        <path d="M630 92 v-12 M624 84 l6 -8 6 8" fill="none" class="k-water" stroke-width="3"/>
+        <path d="M612 108 q-4 12 0 20" fill="none" class="k-water" stroke-width="3"/>
+        <path d="M650 108 q4 12 0 20" fill="none" class="k-water" stroke-width="3"/>
+        <circle cx="678" cy="60" r="16" class="s-alert"/><text x="678" y="66" text-anchor="middle" font-size="15" font-weight="700" style="fill:#fff">3</text>
+        <text x="630" y="192" text-anchor="middle" font-size="14" font-weight="700">En la red</text>
+        <text x="630" y="212" text-anchor="middle" font-size="11.5" class="t-muted">tuberías viejas, fugas y baja</text>
+        <text x="630" y="228" text-anchor="middle" font-size="11.5" class="t-muted">presión que dejan entrar suciedad</text>
+      </svg></div>
+    </figure>
+
+    <div class="cols">
+      <div class="card">
+        <span class="tag short">1 · Fuente</span>
+        <p>El gobierno atribuye la contaminación de Las Pintas a descargas de aguas residuales de varios municipios, agravadas por las lluvias<sup class="c"><a href="#f17">17</a></sup>. La CEA ya contabiliza 77 descargas; el principal contaminante son aguas residuales de conexiones irregulares y colectores colapsados<sup class="c"><a href="#f26">26</a></sup>. Conagua había registrado indicadores de contaminación en la presa desde su monitoreo 2012–2021<sup class="c"><a href="#f17">17</a></sup>.</p>
+      </div>
+      <div class="card">
+        <span class="tag mid">2 · Planta</span>
+        <p>El entonces director del SIAPA admitió que las líneas arrastran residuos pesados después de lavar los filtros<sup class="c"><a href="#f13">13</a></sup>. Académicos de la UdeG proponen modernizar las plantas potabilizadoras como parte de una rehabilitación integral<sup class="c"><a href="#f11">11</a></sup>.</p>
+      </div>
+      <div class="card">
+        <span class="tag short">3 · Red</span>
+        <p>Documentos presentados en el Congreso señalan tuberías viejas, fugas constantes y baja presión como factores que favorecen la contaminación durante la distribución<sup class="c"><a href="#f14">14</a></sup>. Para vigilar más de 8,500 km de red, el SIAPA tiene cuatro muestreadores<sup class="c"><a href="#f12">12</a></sup>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRONOLOGIA -->
+<section id="cronologia">
+  <div class="wrap">
+    <h2>Cómo llegamos aquí</h2>
+    <ul class="timeline">
+      <li><div class="when">Enero 2025 – enero 2026</div>El SIAPA recibe 1,083 reportes de agua turbia o sucia en 475 colonias de Guadalajara, Zapopan, Tlaquepaque y Tonalá<sup class="c"><a href="#f1">1</a></sup>. Ese año, el propio organismo detectó coliformes en el agua al menos 15 veces<sup class="c"><a href="#f34">34</a></sup>.</li>
+      <li><div class="when">Enero – abril 2026</div>Se limpia la presa Las Pintas: 23.6 millones de pesos y más de 64 mil m³ de azolve y lirio retirados<sup class="c"><a href="#f28">28</a></sup>. Meses después, vecinos reportan que vuelve a contaminarse<sup class="c"><a href="#f19">19</a></sup>.</li>
+      <li><div class="when">Marzo – junio 2026</div>Crecen los reportes de agua con color, olor y sedimentos en distintas colonias<sup class="c"><a href="#f5">5</a></sup>.</li>
+      <li><div class="when">Julio 2026</div>Diputados federales de Jalisco piden una cumbre técnico-científica sobre el agua; Conagua ya supervisa el proyecto del acueducto sustituto<sup class="c"><a href="#f3">3</a></sup>.</li>
+      <li class="hot"><div class="when">Agosto 2026</div>Protestas por la calidad del agua; la Comisión Estatal de Derechos Humanos registra 145 quejas<sup class="c"><a href="#f5">5</a></sup>.</li>
+      <li class="hot"><div class="when">6 de octubre</div>El gobernador Pablo Lemus reconoce la crisis y anuncia el cierre temporal de Las Pintas y del sistema antiguo, tandeos por seis meses y un acueducto sustituto<sup class="c"><a href="#f2">2</a></sup>.</li>
+      <li><div class="when">8 de octubre</div>El gobierno envía al Congreso el contrato del acueducto<sup class="c"><a href="#f6">6</a></sup>. La presidenta Sheinbaum ofrece apoyo federal para completar El Zapotillo<sup class="c"><a href="#f10">10</a></sup>.</li>
+      <li class="hot"><div class="when">11 de octubre</div>Megamarcha en La Minerva por el agua<sup class="c"><a href="#f31">31</a></sup>.</li>
+      <li class="hot"><div class="when">15 de octubre</div>Arrancan los tandeos en 627 colonias<sup class="c"><a href="#f24">24</a></sup>. La sesión del Congreso para recibir la iniciativa se cancela por falta de quórum: faltaron 20 diputados<sup class="c"><a href="#f33">33</a></sup>.</li>
+      <li><div class="when">19 de octubre</div>Alrededor de 15% de las colonias en tandeo reporta falta de agua y hay 728 reportes de baja presión<sup class="c"><a href="#f25">25</a></sup>.</li>
+      <li><div class="when">20 de octubre</div>Inicia el desazolve de Las Pintas, el canal y La Calera; buscan reactivar el sistema antiguo a fines de diciembre<sup class="c"><a href="#f26">26</a></sup>. La CEA aclara que eso no termina automáticamente los tandeos<sup class="c"><a href="#f27">27</a></sup>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- PLAN -->
+<section id="plan">
+  <div class="wrap">
+    <h2>Qué propone el gobierno</h2>
+    <p>El plan oficial tiene tres horizontes. Las obras de corto y mediano plazo ya están en marcha; la de largo plazo depende del Congreso.</p>
+    <div class="cols">
+      <div class="card">
+        <span class="tag short">Ahora · hasta marzo 2027</span>
+        <h3>Cerrar la fuente sucia</h3>
+        <ul>
+          <li>Suspender Las Pintas y el sistema antiguo de Chapala<sup class="c"><a href="#f2">2</a></sup>.</li>
+          <li>Tandeos de 2 a 3 días por semana por zona<sup class="c"><a href="#f23">23</a></sup>.</li>
+          <li>Pipas gratuitas y cisternas comunitarias de 10 mil litros<sup class="c"><a href="#f23">23</a></sup>.</li>
+          <li>Clausurar descargas y desazolvar presa y canal<sup class="c"><a href="#f26">26</a></sup>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag mid">Abril 2027</span>
+        <h3>Rodear Las Pintas</h3>
+        <ul>
+          <li>Bypass y bombeo en La Calera para llevar el agua de Chapala directo a las plantas 1 y 5<sup class="c"><a href="#f18">18</a></sup>.</li>
+          <li>Ampliar la potabilizadora 1 de Miravalle<sup class="c"><a href="#f2">2</a></sup>.</li>
+          <li>Las Pintas volvería a usarse solo cuando su agua tenga buena calidad<sup class="c"><a href="#f29">29</a></sup>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag long">2029 en adelante</span>
+        <h3>Nuevas obras grandes</h3>
+        <ul>
+          <li>Acueducto sustituto Chapala–Guadalajara: cerrado, de 42.6 km, para 7.5 m³/s<sup class="c"><a href="#f22">22</a></sup>.</li>
+          <li>Completar El Zapotillo con unos 8,500 millones de recursos federales<sup class="c"><a href="#f6">6</a></sup>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <figure class="figure card">
+      <div class="scroll"><svg viewBox="0 0 760 210" role="img" aria-labelledby="bypass-t">
+        <title id="bypass-t">Antes y después del bypass de La Calera</title>
+        <text x="190" y="24" text-anchor="middle" font-size="14" font-weight="700">Hoy</text>
+        <text x="570" y="24" text-anchor="middle" font-size="14" font-weight="700">Con el bypass (abril 2027)</text>
+        <path d="M380 10 V 200" class="k-line" stroke-width="1.5" stroke-dasharray="4 5"/>
+        <!-- hoy -->
+        <circle cx="45" cy="110" r="28" class="s-wsoft"/><text x="45" y="152" text-anchor="middle" font-size="11">Chapala</text>
+        <path d="M73 110 H 145" class="k-dirty flow" stroke-width="4"/>
+        <ellipse cx="190" cy="110" rx="44" ry="24" class="s-dsoft"/>
+        <text x="190" y="114" text-anchor="middle" font-size="11" font-weight="700">Las Pintas</text>
+        <path d="M170 64 v18 M190 58 v22 M210 64 v18" class="k-alert" stroke-width="3" stroke-linecap="round"/>
+        <path d="M234 110 H 290" class="k-dirty flow" stroke-width="4"/>
+        <rect x="292" y="88" width="60" height="44" rx="6" class="s-surface" stroke="var(--ink)" stroke-width="2"/>
+        <text x="322" y="114" text-anchor="middle" font-size="11" font-weight="700">Planta</text>
+        <text x="190" y="170" text-anchor="middle" font-size="11.5" class="t-alert">el agua pasa por la zona contaminada</text>
+        <!-- despues -->
+        <circle cx="425" cy="110" r="28" class="s-wsoft"/><text x="425" y="152" text-anchor="middle" font-size="11">Chapala</text>
+        <path d="M453 110 C 500 110, 520 60, 570 60 S 640 110, 672 110" fill="none" class="k-water flow" stroke-width="4"/>
+        <rect x="532" y="44" width="76" height="22" rx="11" class="s-surface" stroke="var(--water)"/>
+        <text x="570" y="59" text-anchor="middle" font-size="10.5" font-weight="600" class="t-water">La Calera</text>
+        <ellipse cx="570" cy="140" rx="40" ry="20" class="s-dsoft" opacity=".7"/>
+        <text x="570" y="144" text-anchor="middle" font-size="10.5" class="t-muted">Las Pintas (reserva)</text>
+        <rect x="674" y="88" width="60" height="44" rx="6" class="s-surface" stroke="var(--ink)" stroke-width="2"/>
+        <text x="704" y="114" text-anchor="middle" font-size="11" font-weight="700">Planta</text>
+        <text x="570" y="190" text-anchor="middle" font-size="11.5" class="t-water">el agua llega directo a las plantas 1 y 5</text>
+      </svg></div>
+      <figcaption>Ilustración basada en la descripción oficial del bypass de La Calera<sup class="c"><a href="#f18">18</a></sup>.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ACUEDUCTO -->
+<section id="acueducto">
+  <div class="wrap">
+    <h2>El debate del acueducto sustituto</h2>
+    <p>Casi nadie discute que el acueducto actual está al límite. La pelea es por cómo pagarlo. El gobierno propone un contrato de construcción, mantenimiento, rehabilitación y operación (CMRO) por 11,922 millones de pesos, a 20 o 25 años, que necesita el voto de al menos 26 de los 38 diputados<sup class="c"><a href="#f7">7</a></sup>.</p>
+
+    <div class="card bars" role="img" aria-label="Comparación de costos: 11,922 millones del contrato contra 48,296 millones estimados por la oposición en pagos a 25 años">
+      <h3>¿Cuánto costaría?</h3>
+      <div class="bar">
+        <div class="lbl"><span>Monto del contrato (gobierno)</span><b>$11,922 mdp</b></div>
+        <div class="track"><div class="fill" style="width:24.7%;background:var(--water)"></div></div>
+      </div>
+      <div class="bar">
+        <div class="lbl"><span>Pagos acumulados a 25 años (estimación de la oposición)</span><b>$48,296 mdp</b></div>
+        <div class="track"><div class="fill" style="width:100%;background:var(--alert)"></div></div>
+      </div>
+      <p class="muted" style="font-size:.85rem;margin:10px 0 0">La cifra de 48,296 millones es un cálculo de la oposición, no del gobierno<sup class="c"><a href="#f21">21</a></sup>. El gobierno sostiene que el esquema no es deuda pública ni privatización y que no subirá las tarifas<sup class="c"><a href="#f6">6</a></sup>.</p>
+    </div>
+
+    <div class="pc">
+      <div class="card">
+        <h3><span class="tag ok" style="margin:0">A favor</span></h3>
+        <ul>
+          <li>Sustituye un sistema antiguo donde el agua se contamina y se pierde<sup class="c"><a href="#f4">4</a></sup>.</li>
+          <li>Promete mejor calidad, menos extracción de Chapala y ahorro de energía<sup class="c"><a href="#f2">2</a></sup>.</li>
+          <li>Tiene proyecto ejecutivo listo y aval técnico de Conagua<sup class="c"><a href="#f7">7</a></sup>.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><span class="tag short" style="margin:0">En contra o con condiciones</span></h3>
+        <ul>
+          <li>Morena y Hagamos aceptan la obra, pero no el plazo de 20 a 25 años, y proponen pagarla en unos tres<sup class="c"><a href="#f21">21</a></sup><sup class="c"><a href="#f9">9</a></sup>.</li>
+          <li>La iniciativa no incluye reestructurar el SIAPA, su cartera vencida ni la renovación de la red<sup class="c"><a href="#f8">8</a></sup>.</li>
+          <li>Colectivos lo rechazan como posible privatización<sup class="c"><a href="#f20">20</a></sup>.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Lo clave:</b> el acueducto mejora el agua que <i>entra</i> a la ciudad, pero no arregla la red que la reparte. Si la red sigue perdiendo entre 30 y 40% del agua<sup class="c"><a href="#f15">15</a></sup> y contaminándola en el camino<sup class="c"><a href="#f14">14</a></sup>, una fuente limpia no basta.
+    </div>
+  </div>
+</section>
+
+<!-- ALTERNATIVAS -->
+<section id="alternativas">
+  <div class="wrap">
+    <h2>Alternativas y prioridades</h2>
+    <p>Esta sección es análisis propio a partir de las fuentes, no una propuesta oficial ni de ingeniería. El criterio: primero hacer segura el agua que ya llega, luego recuperar la que se pierde, y al final traer más.</p>
+
+    <div class="phase"><div class="n">0</div><div><h3>Semanas: cerrar descargas y medir</h3><p>Clausurar las 77 descargas de forma permanente, porque la limpieza de abril no duró<sup class="c"><a href="#f19">19</a></sup>; la propia CEA advierte que desazolvar no sirve si sigue llegando agua residual<sup class="c"><a href="#f27">27</a></sup>. Ampliar el monitoreo de calidad más allá de cuatro muestreadores<sup class="c"><a href="#f12">12</a></sup>.</p></div></div>
+    <div class="phase"><div class="n">1</div><div><h3>Meses: terminar lo que ya está en obra</h3><p>Bypass de La Calera, ampliación de Miravalle, limpieza sistemática de tanques y un diagnóstico integral de la red, que hoy no existe según académicos de la UdeG<sup class="c"><a href="#f11">11</a></sup>.</p></div></div>
+    <div class="phase"><div class="n">2</div><div><h3>1 a 2 años: renovar la red y terminar El Zapotillo</h3><p>Sectorizar y reemplazar tuberías donde hay más reportes y fugas: recuperar parte del 30–40% perdido equivale a una fuente nueva<sup class="c"><a href="#f15">15</a></sup>. Completar El Zapotillo, que opera al 45%, con dinero federal<sup class="c"><a href="#f10">10</a></sup>.</p></div></div>
+    <div class="phase"><div class="n">3</div><div><h3>2 a 4 años: acueducto, con reglas claras</h3><p>Construirlo, pero comparando el CMRO contra inversión pública directa con cifras abiertas, y ligando los pagos a metas verificables de calidad y caudal.</p></div></div>
+
+    <h3 style="margin-top:28px">Ideas que no están en el plan oficial</h3>
+    <div class="cols">
+      <div class="card"><span class="tag long">Datos abiertos</span><p style="margin:0">Sensores de turbidez, cloro y presión en tanques y puntos críticos, con resultados públicos por colonia.</p></div>
+      <div class="card"><span class="tag long">Reúso industrial</span><p style="margin:0">Que la industria use agua tratada en lugar de agua potable o de pozo.</p></div>
+      <div class="card"><span class="tag long">SIAPA sano</span><p style="margin:0">Medidores en lugar de cuota fija, recuperar la cartera vencida<sup class="c"><a href="#f8">8</a></sup> y una auditoría técnica independiente.</p></div>
+      <div class="card"><span class="tag long">Lluvia y acuíferos</span><p style="margin:0">Captación pluvial y recarga de acuíferos, hoy sobreexplotados<sup class="c"><a href="#f16">16</a></sup>, para no depender solo de traer agua de lejos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TU -->
+<section id="tu">
+  <div class="wrap">
+    <h2>Qué puedes hacer</h2>
+    <div class="cols">
+      <div class="card"><h3>Consulta tu tandeo</h3><p style="margin:0">Revisa qué días no tendrás agua en el <a href="https://rotaciondeserviciosiapa.jalisco.gob.mx/" rel="noopener">sitio oficial de rotación del SIAPA</a><sup class="c"><a href="#f32">32</a></sup> y llena tinacos y cisternas el día previo.</p></div>
+      <div class="card"><h3>Pide pipa o cisterna</h3><p style="margin:0">El SIAPA ofrece pipas gratuitas y hay cisternas comunitarias<sup class="c"><a href="#f23">23</a></sup>; Zapopan y Tlaquepaque tienen operativos y mapas propios<sup class="c"><a href="#f25">25</a></sup>.</p></div>
+      <div class="card"><h3>Limpia tu almacenamiento</h3><p style="margin:0">El SIAPA recomienda lavar aljibes y tinacos para no guardar agua con sedimentos<sup class="c"><a href="#f23">23</a></sup>.</p></div>
+      <div class="card"><h3>Reporta y exige</h3><p style="margin:0">Reporta agua turbia al SIAPA y, si tienes una opinión sobre el acueducto, escríbele a tu diputado local: la votación necesita 26 de 38 votos<sup class="c"><a href="#f7">7</a></sup>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- GLOSARIO -->
+<section id="glosario">
+  <div class="wrap">
+    <h2>¿Quién es quién?</h2>
+    <dl class="gloss">
+      <dt>Conagua</dt><dd>Comisión Nacional del Agua (federal). Administra el Lago de Chapala, otorga concesiones y avala proyectos.</dd>
+      <dt>SGIA</dt><dd>Secretaría de Gestión Integral del Agua de Jalisco. Define la política hídrica del estado.</dd>
+      <dt>CEA</dt><dd>Comisión Estatal del Agua de Jalisco. Construye y opera presas, acueductos y plantas; dirige el saneamiento de Las Pintas.</dd>
+      <dt>SIAPA</dt><dd>Organismo intermunicipal que potabiliza, distribuye y cobra el agua en la ciudad; aplica los tandeos.</dd>
+      <dt>CMRO</dt><dd>Contrato de Construcción, Mantenimiento, Rehabilitación y Operación: una empresa construye y opera la obra y el estado le paga durante años.</dd>
+      <dt>Tandeo</dt><dd>Rotación del servicio: cada zona se queda sin agua algunos días de la semana.</dd>
+    </dl>
+  </div>
+</section>
+
+<!-- FUENTES -->
+<section id="fuentes">
+  <div class="wrap">
+    <h2>Fuentes</h2>
+    <p class="muted">Notas periodísticas y documentos públicos consultados entre el 15 y el 20 de octubre de 2026. Los datos se resumen con nuestras propias palabras; consulta cada fuente para el contexto completo.</p>
+    <ol class="sources">
+      <li id="f1">Expansión Política. <a href="https://politica.expansion.mx/estados/2026/10/07/guadalajara-tendra-menos-agua-por-seis-meses-crisis" rel="noopener">Guadalajara tendrá menos agua por seis meses</a>. 7 oct 2026.</li>
+      <li id="f2">Crónica Jalisco. <a href="https://www.cronica.com.mx/jalisco/guadalajara/2026/10/06/lemus-reconoce-crisis-de-agua-y-anuncia-rotacion-del-servicio-por-seis-meses/" rel="noopener">Lemus reconoce crisis de agua y anuncia rotación del servicio por seis meses</a>. 6 oct 2026.</li>
+      <li id="f3">La Jornada. <a href="https://www.jornada.com.mx/2026/07/21/estados/027n2est" rel="noopener">Diputados federales proponen cumbre por el agua</a>. 21 jul 2026.</li>
+      <li id="f4">La Jornada. <a href="https://www.jornada.com.mx/2026/10/12/edito" rel="noopener">Editorial sobre la crisis del agua en Guadalajara</a>. 12 oct 2026.</li>
+      <li id="f5">Grupo Animal. <a href="https://grupoanimal.mx/explicaciones/crisis-agua-sucia-guadalajara-cronologia" rel="noopener">Crisis de agua sucia en Guadalajara: cronología del problema</a>. 10 oct 2026.</li>
+      <li id="f6">Crónica Jalisco. <a href="https://www.cronica.com.mx/jalisco/guadalajara/2026/10/08/lleva-lemus-al-congreso-proyecto-para-construir-acueducto-sustituto-chapala-guadalajara/" rel="noopener">Lleva Lemus al Congreso proyecto del Acueducto Sustituto</a>. 8 oct 2026.</li>
+      <li id="f7">Crónica Jalisco. <a href="https://www.cronica.com.mx/jalisco/guadalajara/2026/10/08/diputados-analizaran-la-iniciativa-para-aprobar-el-contrato-que-se-requiere-para-construir-el-acueducto-de-chapala/" rel="noopener">Diputados analizarán el contrato del acueducto</a>. 8 oct 2026.</li>
+      <li id="f8">Crónica Jalisco. <a href="https://www.cronica.com.mx/jalisco/guadalajara/2026/10/09/a-la-iniciativa-que-envio-el-gobierno-estatal-le-falta-un-plan-integral-para-resolver-el-problema-del-agua-sucia/" rel="noopener">Hagamos pide una solución integral</a>. 9 oct 2026.</li>
+      <li id="f9">Crónica Jalisco. <a href="https://www.cronica.com.mx/jalisco/guadalajara/2026/10/09/diputados-de-morena-no-se-dejaran-presionar-para-avalar-iniciativa-de-lemus-para-el-acueducto-chapala-guadalajara/" rel="noopener">Postura de Morena sobre el acueducto</a>. 9 oct 2026.</li>
+      <li id="f10">Crónica Nacional. <a href="https://www.cronica.com.mx/nacional/2026/10/08/sheinbaum-y-lemus-acuerdan-atender-la-crisis-por-la-calidad-del-agua-en-guadalajara/" rel="noopener">Sheinbaum y Lemus acuerdan atender la crisis</a>. 8 oct 2026.</li>
+      <li id="f11">Expansión Política. <a href="https://politica.expansion.mx/mexico/2026/05/10/agua-contaminada-en-guadalajara-metales-pesados" rel="noopener">Agua contaminada en Guadalajara</a>. 10 may 2026.</li>
+      <li id="f12">Milenio. <a href="https://amp.milenio.com/comunidad/agua-en-guadalajara-sistema-de-abastecimiento-que-amenaza-la-salud" rel="noopener">Agua en Guadalajara: un servicio que amenaza la salud</a>. 2026.</li>
+      <li id="f13">ADN40. <a href="https://www.adn40.mx/mexico/2026-03-16/el-siapa-recibe-ultimatum-por-agua-sucia-en-la-colonia-americana/" rel="noopener">El SIAPA recibe ultimátum por agua sucia en la Colonia Americana</a>. 16 mar 2026.</li>
+      <li id="f14">Congreso de Jalisco. <a href="https://infolej.congresojal.gob.mx/documentos/estados/R_162990.pdf" rel="noopener">Iniciativa sobre la calidad del agua del SIAPA (R 162990)</a>.</li>
+      <li id="f15">Publimetro. <a href="https://www.publimetro.com.mx/jalisco/2023/04/12/guadalajara-pierde-hasta-40-de-su-agua-en-fugas/" rel="noopener">Guadalajara pierde hasta 40% de su agua en fugas</a>. 12 abr 2023.</li>
+      <li id="f16">El Universal. <a href="https://www.eluniversal.com.mx/estados/guadalajara-en-bancarrota-hidrica/" rel="noopener">Guadalajara en bancarrota hídrica</a>.</li>
+      <li id="f17">Expansión Política. <a href="https://politica.expansion.mx/mexico/2026/10/09/por-que-esta-contaminada-presa-las-pintas-jalisco" rel="noopener">¿Qué provocó la contaminación de la presa Las Pintas?</a>. 9 oct 2026.</li>
+      <li id="f18">Azteca Jalisco. <a href="https://www.aztecajalisco.com/noticias-jalisco-local/jalisco-construye-bypass-en-la-calera-para-evitar-paso-del-agua-por-las-pintas/" rel="noopener">Jalisco construye bypass en La Calera</a>. Oct 2026.</li>
+      <li id="f19">Azteca Jalisco. <a href="https://www.aztecajalisco.com/programas/presa-las-pintas-vuelve-a-contaminarse-y-vecinos-exigen-una-solucion/" rel="noopener">Presa Las Pintas vuelve a contaminarse</a>. 2026.</li>
+      <li id="f20">Milenio. <a href="https://www.milenio.com/comunidad/cancelan-sesion-de-entrada-del-acueducto-chapala-guadalajara" rel="noopener">Cancelan sesión de entrada del acueducto por falta de quórum</a>. 15 oct 2026.</li>
+      <li id="f21">Milenio. <a href="https://www.milenio.com/comunidad/oposicion-de-jalisco-dice-si-al-nuevo-acueducto-chapala-guadalajara" rel="noopener">Oposición dice sí al acueducto, pero pagarlo en tres años</a>. 15 oct 2026.</li>
+      <li id="f22">The Mexican Times. <a href="https://www.mexicantimes.com.mx/crisis-agua-guadalajara-acueducto/" rel="noopener">El acueducto, a prueba tras la marcha</a>. Oct 2026.</li>
+      <li id="f23">El Informador. <a href="https://www.informador.mx/jalisco/siapa-arrancan-tandeos-del-agua-en-el-area-metropolitana-de-guadalajara-primeras-colonias-afectadas-20261015-0047.html" rel="noopener">Arrancan tandeos del agua en el AMG</a>. 15 oct 2026.</li>
+      <li id="f24">La Razón. <a href="https://www.razon.com.mx/estados/2026/10/14/tandeo-en-guadalajara-golpeara-a-23-millones/" rel="noopener">Tandeo en Guadalajara golpeará a 2.3 millones</a>. 14 oct 2026.</li>
+      <li id="f25">NNC. <a href="https://nnc.mx/articulo/cea-admite-falta-de-agua-en-15-de-colonias-con-tandeos" rel="noopener">CEA admite falta de agua en 15% de colonias con tandeos</a>. 19 oct 2026.</li>
+      <li id="f26">Siker. <a href="https://siker.com.mx/jalisco/buscan-reactivar-sistema-antiguo-de-agua-en-diciembre-aceleran-obras-en-las-pintas/" rel="noopener">Buscan reactivar el sistema antiguo en diciembre</a>. 20 oct 2026.</li>
+      <li id="f27">Crónica Jalisco. <a href="https://www.cronica.com.mx/jalisco/guadalajara/2026/10/20/rotacion-de-agua-limpia-no-concluira-automaticamente-en-diciembre-cea/" rel="noopener">Rotación no concluirá automáticamente en diciembre: CEA</a>. 20 oct 2026.</li>
+      <li id="f28">Quadratín Jalisco. <a href="https://jalisco.quadratin.com.mx/principal/concluyen-saneamiento-de-presa-las-pintas-promete-lemus-agua-mas-limpia/" rel="noopener">Concluyen saneamiento de Presa Las Pintas</a>. 7 abr 2026.</li>
+      <li id="f29">El Informador. <a href="https://www.informador.mx/jalisco/saneamiento-de-las-pintas-permitira-identificar-descargas-irregulares-segun-autoridades-20261013-0101.html" rel="noopener">Saneamiento de Las Pintas permitirá identificar descargas</a>. 13 oct 2026.</li>
+      <li id="f30">Grupo Animal. <a href="https://grupoanimal.mx/estados/lemus-crisis-agua-jalisco-iniciativa-nuevo-acueducto" rel="noopener">Lemus presenta iniciativa de nuevo acueducto</a>. 8 oct 2026.</li>
+      <li id="f31">Uno TV. <a href="https://www.unotv.com/estados/jalisco/agua-sucia-en-guadalajara-mapa-de-zonas-afectadas/" rel="noopener">Agua sucia en Guadalajara: mapa de zonas afectadas</a>. 2026.</li>
+      <li id="f32">SIAPA. <a href="https://rotaciondeserviciosiapa.jalisco.gob.mx/" rel="noopener">Programa de Rotación del Servicio</a> (sitio oficial).</li>
+      <li id="f33">Meganoticias. <a href="https://www.meganoticias.mx/guadalajara/noticia/ausentismo-de-diputados-frena-sesi%C3%B3n-sobre-acueducto-chapala-guadalajara/779618" rel="noopener">Ausentismo de diputados frena sesión sobre el acueducto</a>. 15 oct 2026.</li>
+      <li id="f34">Volcánicas. <a href="https://volcanicas.com/megamarchas-en-guadalajara-por-mala-calidad-del-agua/" rel="noopener">Megamarchas en Guadalajara por mala calidad del agua</a>. Oct 2026.</li>
+    </ol>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Página informativa ciudadana, sin afiliación a ningún gobierno o partido. La sección de alternativas es análisis propio. Si encuentras un error, revisa la fuente enlazada; la situación cambia rápido.</p>
+  </div>
+</footer>
+
+<button class="theme-btn" id="themeBtn" type="button" aria-label="Cambiar tema claro u oscuro">◐ Tema</button>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var s=localStorage.getItem('theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
