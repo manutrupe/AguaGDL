@@ -107,6 +107,13 @@ ol.sources li{margin:.45em 0;scroll-margin-top:60px}
 ol.sources li:target{background:var(--water-soft);border-radius:6px}
 footer{padding:36px 0 60px;font-size:.85rem;color:var(--muted)}
 .theme-btn{position:fixed;right:14px;bottom:14px;z-index:6;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font:500 .85rem Inter,sans-serif;cursor:pointer;box-shadow:var(--shadow)}
+
+.gmap{position:relative;aspect-ratio:4/5;max-height:560px;width:100%;border-radius:10px;overflow:hidden;background:var(--line)}
+.gmap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (min-width:641px){.gmap{aspect-ratio:4/3}}
+ol.places{margin:18px 0 0;padding-left:1.6em;font-size:.95rem}
+ol.places li{margin:.5em 0}
+svg .t-on{fill:var(--surface)}
 /* SVG palette */
 .s-water{fill:var(--water)} .s-water2{fill:var(--water-2)} .s-wsoft{fill:var(--water-soft)}
 .s-dirty{fill:var(--dirty)} .s-dsoft{fill:var(--dirty-soft)} .s-alert{fill:var(--alert)} .s-asoft{fill:var(--alert-soft)}
@@ -128,7 +135,7 @@ svg .t-water{fill:var(--water)}
     <div class="kicker">Zona Metropolitana de Guadalajara · 2026</div>
     <h1>Agua turbia en la llave: qué está pasando y qué se puede hacer</h1>
     <p class="lede">Una explicación con ilustraciones de la crisis de calidad del agua en Guadalajara, Zapopan, Tlaquepaque y Tonalá: de dónde viene el agua, dónde se ensucia, qué propone el gobierno y qué alternativas hay. Cada dato enlaza a su fuente.</p>
-    <div class="meta">Actualizado al 20 de octubre de 2026 · Los números pequeños junto a cada dato llevan a la <a href="#fuentes">lista de fuentes</a>.</div>
+    <div class="meta">Actualizado al 21 de octubre de 2026 · Los números pequeños junto a cada dato llevan a la <a href="#fuentes">lista de fuentes</a>.</div>
   </div>
 </header>
 
@@ -136,6 +143,7 @@ svg .t-water{fill:var(--water)}
   <div class="wrap">
     <a href="#resumen">Resumen</a>
     <a href="#origen">De dónde viene</a>
+    <a href="#mapa">Mapa</a>
     <a href="#donde">Dónde se ensucia</a>
     <a href="#cronologia">Cronología</a>
     <a href="#plan">El plan oficial</a>
@@ -263,6 +271,77 @@ svg .t-water{fill:var(--water)}
       </svg></div>
       <figcaption>Esquema simplificado, no a escala. Los puntos rojos marcan las descargas de aguas residuales detectadas en el sistema antiguo<sup class="c"><a href="#f26">26</a></sup>; el agua de pozos y presas entra por otras plantas<sup class="c"><a href="#f16">16</a></sup>.</figcaption>
     </figure>
+  </div>
+</section>
+
+<!-- MAPA -->
+<section id="mapa">
+  <div class="wrap">
+    <h2>Mapa del sistema</h2>
+    <p>Dónde están las presas, los canales y las plantas potabilizadoras que abastecen a la ciudad. El agua de Chapala llega por el acueducto cerrado y por el canal de Atequiza; la de Calderón y El Zapotillo entra por el norte hasta San Gaspar.</p>
+
+    <figure class="figure card">
+      <svg viewBox="0 0 520 650" role="img" aria-labelledby="mapa-t mapa-d" style="max-width:520px;margin:0 auto">
+        <title id="mapa-t">Mapa del sistema de agua de la Zona Metropolitana de Guadalajara</title>
+        <desc id="mapa-d">Al sureste, el Lago de Chapala alimenta el acueducto cerrado, que llega a la planta de Miravalle y a Las Huertas, y el canal de Atequiza, que nace en la presa Corona y llega a la presa Las Pintas. Al noreste, el sistema El Zapotillo, El Salto, La Red y Calderón lleva agua a la planta de San Gaspar en Tonalá.</desc>
+        <path d="M52.4 235.2 L115.3 246.4 L157.2 280.0 L157.2 336.0 L125.8 380.8 L73.4 386.4 L26.2 358.4 L21.0 291.2 Z" class="s-line" opacity=".55"/>
+        <path d="M36.7 532.0 L99.6 520.8 L141.5 515.2 L172.9 518.0 L225.3 504.0 L293.5 495.6 L366.8 492.8 L414.0 515.2 L429.7 548.8 L398.3 582.4 L335.4 610.4 L262.0 610.4 L204.4 588.0 L131.0 576.8 L73.4 560.0 Z" class="s-wsoft"/><path d="M36.7 532.0 L99.6 520.8 L141.5 515.2 L172.9 518.0 L225.3 504.0 L293.5 495.6 L366.8 492.8 L414.0 515.2 L429.7 548.8 L398.3 582.4 L335.4 610.4 L262.0 610.4 L204.4 588.0 L131.0 576.8 L73.4 560.0 Z" fill="none" class="k-water" stroke-width="1.5"/>
+        <path d="M393.0 490.0 L314.4 470.4 L251.5 459.2 L204.4 425.6 L183.4 397.6 L183.4 347.2 L178.2 291.2 L167.7 224.0 L141.5 151.2" fill="none" class="k-water" stroke-width="2" opacity=".45" stroke-dasharray="2 4"/>
+        <path d="M220.1 506.8 L183.4 459.2 L131.0 403.2 L99.6 358.4 L83.8 338.8" fill="none" class="k-water" stroke-width="4" stroke-linecap="round"/>
+        <path d="M99.6 358.4 L115.3 336.0" fill="none" class="k-water" stroke-width="3" stroke-linecap="round"/>
+        <path d="M246.3 459.2 L204.4 456.4 L167.7 425.6 L141.5 397.6 L115.3 366.8" fill="none" class="k-dirty" stroke-width="4" stroke-linecap="round"/>
+        <path d="M115.3 366.8 L99.6 352.8 L83.8 338.8" fill="none" class="k-alert" stroke-width="3" stroke-dasharray="3 4"/>
+        <path d="M167.7 425.6 L110.0 386.4 L83.8 338.8" fill="none" class="k-dirty" stroke-width="2.5" stroke-dasharray="7 5"/>
+        <path d="M408.7 44.8 L450.7 128.8 L345.9 201.6 L262.0 240.8 L204.4 274.4 L146.7 310.8" fill="none" class="k-ok" stroke-width="4" stroke-linecap="round"/>
+        <text x="246.3" y="554.4" text-anchor="middle" font-size="16" font-weight="700" class="t-water">Lago de Chapala</text>
+        <text x="83.8" y="263.2" text-anchor="middle" font-size="14" class="t-muted">Zona metropolitana</text>
+        <text x="146.7" y="190.4" font-size="12" class="t-water" opacity=".8" transform="rotate(-75 146.7 190.4)">Río Santiago</text>
+        <g><circle cx="345.9" cy="543.2" r="11" class="s-water"/><text x="345.9" y="547.2" text-anchor="middle" font-size="11" font-weight="700" class="t-on">1</text></g>
+        <g><circle cx="220.1" cy="506.8" r="11" class="s-water"/><text x="220.1" y="510.8" text-anchor="middle" font-size="11" font-weight="700" class="t-on">2</text><text x="236.1" y="526.8" text-anchor="start" font-size="15" font-weight="600">Toma del acueducto</text></g>
+        <g><circle cx="246.3" cy="459.2" r="11" class="s-dirty"/><text x="246.3" y="463.2" text-anchor="middle" font-size="11" font-weight="700" class="t-on">3</text><text x="262.3" y="464.2" text-anchor="start" font-size="15" font-weight="600">Presa Corona</text></g>
+        <g><circle cx="204.4" cy="456.4" r="11" class="s-dirty"/><text x="204.4" y="460.4" text-anchor="middle" font-size="11" font-weight="700" class="t-on">4</text><text x="188.4" y="461.4" text-anchor="end" font-size="15" font-weight="600">Atequiza</text></g>
+        <g><circle cx="167.7" cy="425.6" r="11" class="s-dirty"/><text x="167.7" y="429.6" text-anchor="middle" font-size="11" font-weight="700" class="t-on">5</text><text x="151.7" y="430.6" text-anchor="end" font-size="15" font-weight="600">La Calera</text></g>
+        <g><circle cx="115.3" cy="366.8" r="11" class="s-alert"/><text x="115.3" y="370.8" text-anchor="middle" font-size="11" font-weight="700" class="t-on">6</text><text x="131.3" y="376.8" text-anchor="start" font-size="15" font-weight="600">Las Pintas</text></g>
+        <g><rect x="73.8" y="328.8" width="20" height="20" rx="4" class="s-ink"/><text x="83.8" y="342.8" text-anchor="middle" font-size="11" font-weight="700" class="t-on">7</text><text x="67.8" y="343.8" text-anchor="end" font-size="15" font-weight="600">Miravalle</text></g>
+        <g><rect x="105.3" y="326.0" width="20" height="20" rx="4" class="s-ink"/><text x="115.3" y="340.0" text-anchor="middle" font-size="11" font-weight="700" class="t-on">8</text><text x="123.3" y="319.0" text-anchor="end" font-size="15" font-weight="600">Las Huertas</text></g>
+        <g><rect x="136.7" y="300.8" width="20" height="20" rx="4" class="s-ink"/><text x="146.7" y="314.8" text-anchor="middle" font-size="11" font-weight="700" class="t-on">9</text><text x="162.7" y="316.8" text-anchor="start" font-size="15" font-weight="600">San Gaspar</text></g>
+        <g><circle cx="262.0" cy="240.8" r="11" class="s-ok"/><text x="262.0" y="244.8" text-anchor="middle" font-size="11" font-weight="700" class="t-on">10</text><text x="246.0" y="245.8" text-anchor="end" font-size="15" font-weight="600">Presa Calderón</text></g>
+        <g><circle cx="345.9" cy="201.6" r="11" class="s-ok"/><text x="345.9" y="205.6" text-anchor="middle" font-size="11" font-weight="700" class="t-on">11</text><text x="329.9" y="206.6" text-anchor="end" font-size="15" font-weight="600">La Red</text></g>
+        <g><circle cx="450.7" cy="128.8" r="11" class="s-ok"/><text x="450.7" y="132.8" text-anchor="middle" font-size="11" font-weight="700" class="t-on">12</text><text x="434.7" y="133.8" text-anchor="end" font-size="15" font-weight="600">Presa El Salto</text></g>
+        <g><circle cx="408.7" cy="44.8" r="11" class="s-ok"/><text x="408.7" y="48.8" text-anchor="middle" font-size="11" font-weight="700" class="t-on">13</text><text x="392.7" y="49.8" text-anchor="end" font-size="15" font-weight="600">El Zapotillo</text></g>
+        <g><path d="M20 620 h100.9" class="k-ink" stroke-width="2"/><path d="M20 616 v8 M120.9 616 v8" class="k-ink" stroke-width="2"/><text x="20" y="638" font-size="11" class="t-muted">20 km</text></g>
+        <g transform="translate(490 600)"><path d="M0 -14 L6 6 L0 2 L-6 6 Z" class="s-ink"/><text x="0" y="22" text-anchor="middle" font-size="11" font-weight="700">N</text></g>
+      </svg>
+      <div class="legend" style="margin-top:12px">
+        <span><i style="background:var(--water)"></i>Acueducto cerrado (Chapala)</span>
+        <span><i style="background:var(--dirty)"></i>Sistema antiguo: canal de Atequiza</span>
+        <span><i style="background:var(--alert)"></i>Las Pintas, suspendida</span>
+        <span><i style="background:var(--ok)"></i>Sistema El Zapotillo–Calderón</span>
+        <span><i style="background:var(--ink)"></i>Planta potabilizadora</span>
+      </div>
+      <figcaption>Ubicaciones aproximadas y trazos simplificados; sirve para orientarse, no para medir. La línea punteada desde La Calera es el bypass en obra.</figcaption>
+    </figure>
+
+    <figure class="figure card">
+      <div class="gmap"><iframe src="https://www.google.com/maps/d/embed?mid=18l4QSHSKwu79AyKfZZx7ath-MSJq4T8&amp;ehbc=2E312F&amp;noprof=1" title="Mapa interactivo del sistema de agua en Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+      <figcaption>Mismos puntos en Google Maps, con zoom. Las fuentes de cada punto están en la lista de abajo. <a href="https://www.google.com/maps/d/viewer?mid=18l4QSHSKwu79AyKfZZx7ath-MSJq4T8" rel="noopener" target="_blank">Abrir en Google Maps →</a></figcaption>
+    </figure>
+
+    <ol class="places">
+      <li><b>Lago de Chapala.</b> Fuente principal, a unos 42 km al sur de la ciudad; aporta entre 63% y 67% del agua<sup class="c"><a href="#f16">16</a></sup><sup class="c"><a href="#f43">43</a></sup>.</li>
+      <li><b>Toma del acueducto.</b> Cerca de Santa Cruz de la Soledad, Chapala. Dos tuberías de 42 km llevan poco más de 5 m³/s a la ciudad<sup class="c"><a href="#f44">44</a></sup><sup class="c"><a href="#f42">42</a></sup>.</li>
+      <li><b>Presa Corona.</b> En el río Santiago; ahí nace el canal de Atequiza, a cielo abierto<sup class="c"><a href="#f42">42</a></sup>.</li>
+      <li><b>Canal de Atequiza.</b> Lleva alrededor de 2.5 m³/s por Ixtlahuacán de los Membrillos, Tlajomulco y Tlaquepaque<sup class="c"><a href="#f42">42</a></sup><sup class="c"><a href="#f39">39</a></sup>.</li>
+      <li><b>La Calera.</b> Aquí se construye el bypass para que el agua no pase por Las Pintas, a más tardar en abril de 2027<sup class="c"><a href="#f18">18</a></sup>.</li>
+      <li><b>Presa Las Pintas.</b> Recibe el canal y bombea a Miravalle. Fuera de servicio desde el 6 de octubre por descargas de aguas residuales<sup class="c"><a href="#f2">2</a></sup><sup class="c"><a href="#f26">26</a></sup>.</li>
+      <li><b>Planta 1 Miravalle.</b> Tiene unos 70 años y abastece cerca de 42% de la ciudad. Recibe el acueducto y el sistema antiguo<sup class="c"><a href="#f39">39</a></sup>.</li>
+      <li><b>Las Huertas.</b> También recibe agua de Chapala; no entra en la rotación de servicio<sup class="c"><a href="#f39">39</a></sup>.</li>
+      <li><b>Planta 3 San Gaspar.</b> En Tonalá. Trata el agua de Calderón y El Zapotillo; capacidad efectiva de unos 2.3 m³/s, en ampliación<sup class="c"><a href="#f40">40</a></sup>.</li>
+      <li><b>Presa Calderón.</b> También llamada Elías González Chávez; 80 hm³ y cerca de 9% del suministro<sup class="c"><a href="#f43">43</a></sup>.</li>
+      <li><b>Presa La Red.</b> Un acueducto de 39 km la une con la presa El Salto<sup class="c"><a href="#f41">41</a></sup>.</li>
+      <li><b>Presa El Salto.</b> Recibe el agua bombeada desde El Zapotillo y la envía hacia Calderón<sup class="c"><a href="#f41">41</a></sup>.</li>
+      <li><b>El Zapotillo.</b> Su sistema opera al 45% de su capacidad<sup class="c"><a href="#f10">10</a></sup>.</li>
+    </ol>
   </div>
 </section>
 
@@ -550,6 +629,12 @@ svg .t-water{fill:var(--water)}
       <li id="f36">Infobae. <a href="https://www.infobae.com/mexico/2026/10/14/colectivos-alistan-segunda-mega-marcha-por-el-agua-tras-represion-policial-en-guadalajara/" rel="noopener">Colectivos alistan segunda megamarcha por el agua tras represión policial</a>. 14 oct 2026.</li>
       <li id="f37">La Jornada. <a href="https://www.jornada.com.mx/2026/10/19/estados/027n1est" rel="noopener">Nueva marcha contra agua sucia en Guadalajara reúne a 10 mil personas</a>. 19 oct 2026.</li>
       <li id="f38">Infobae. <a href="https://www.infobae.com/mexico/2026/10/18/encapuchados-y-grupos-de-choque-irrumpen-en-la-segunda-megamarcha-por-el-agua-en-guadalajara-manifestantes-los-expulsan/" rel="noopener">Encapuchados irrumpen en la segunda megamarcha; manifestantes los expulsan</a>. 18 oct 2026.</li>
+      <li id="f39">Líder Empresarial. <a href="https://www.liderempresarial.com/agua-en-guadalajara-el-mapa-interactivo-para-ver-el-impacto-en-tu-negocio/" rel="noopener">Agua en Guadalajara: el mapa interactivo para ver el impacto en tu negocio</a>. 13 oct 2026.</li>
+      <li id="f40">Gobierno de Jalisco, Plan Integral del Agua. <a href="https://planintegraldelagua.jalisco.gob.mx/pdf/an-0024.pdf" rel="noopener">Ampliación de la Planta Potabilizadora No. 3 San Gaspar</a> (PDF). 2025.</li>
+      <li id="f41">Tus Buenas Noticias. <a href="https://www.tusbuenasnoticias.com/amp/mexico/general/inauguran-acueducto-el-salto---la-red--calderon-en-jalisco/30570" rel="noopener">En marcha el acueducto El Salto–La Red–Calderón</a>. 23 feb 2024.</li>
+      <li id="f42">N+. <a href="https://www.nmas.com.mx/jalisco/medio-ambiente/el-lago-chapala-abastece-agua-el-amg-medio-estas-dos-vias/" rel="noopener">El lago de Chapala abastece de agua al AMG por estas dos vías</a>. 17 mar 2026.</li>
+      <li id="f43">Uno TV. <a href="https://www.unotv.com/estados/jalisco/de-donde-llega-el-agua-que-se-usa-en-guadalajara-este-mapa-te-lo-explica/" rel="noopener">¿De dónde llega el agua que se usa en Guadalajara? Este mapa te lo explica</a>. 16 oct 2026.</li>
+      <li id="f44">Flores Berrones, R. <a href="https://revistatyca.org.mx/index.php/tyca/article/download/556/460/864" rel="noopener">Acueducto Chapala–Guadalajara</a>. Revista Tecnología y Ciencias del Agua, c. 1987.</li>
     </ol>
   </div>
 </section>
