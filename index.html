@@ -107,6 +107,10 @@ ol.sources li{margin:.45em 0;scroll-margin-top:60px}
 ol.sources li:target{background:var(--water-soft);border-radius:6px}
 footer{padding:36px 0 60px;font-size:.85rem;color:var(--muted)}
 .theme-btn{position:fixed;right:14px;bottom:14px;z-index:6;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 14px;font:500 .85rem Inter,sans-serif;cursor:pointer;box-shadow:var(--shadow)}
+
+.gmap{position:relative;aspect-ratio:4/5;max-height:560px;width:100%;border-radius:10px;overflow:hidden;background:var(--line)}
+.gmap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media (min-width:641px){.gmap{aspect-ratio:4/3}}
 ol.places{margin:18px 0 0;padding-left:1.6em;font-size:.95rem}
 ol.places li{margin:.5em 0}
 svg .t-on{fill:var(--surface)}
@@ -316,7 +320,11 @@ svg .t-water{fill:var(--water)}
         <span><i style="background:var(--ink)"></i>Planta potabilizadora</span>
       </div>
       <figcaption>Ubicaciones aproximadas y trazos simplificados; sirve para orientarse, no para medir. La línea punteada desde La Calera es el bypass en obra.</figcaption>
-      <p style="margin:12px 0 0"><a href="https://www.google.com/maps/d/viewer?mid=18l4QSHSKwu79AyKfZZx7ath-MSJq4T8" rel="noopener" target="_blank">Ver estos puntos en Google Maps →</a></p>
+    </figure>
+
+    <figure class="figure card">
+      <div class="gmap"><iframe src="https://www.google.com/maps/d/embed?mid=18l4QSHSKwu79AyKfZZx7ath-MSJq4T8&amp;ehbc=2E312F&amp;noprof=1" title="Mapa interactivo del sistema de agua en Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+      <figcaption>Mismos puntos en Google Maps, con zoom. Las fuentes de cada punto están en la lista de abajo. <a href="https://www.google.com/maps/d/viewer?mid=18l4QSHSKwu79AyKfZZx7ath-MSJq4T8" rel="noopener" target="_blank">Abrir en Google Maps →</a></figcaption>
     </figure>
 
     <ol class="places">
